@@ -2,11 +2,16 @@
 
 ## Find the answers by your understandings(Shoulden't be copied by internet & used hand-made diagrams)  of below quistions and Write blog on it.
 1) What is Git and why is it important?
-2) What is difference Between Main Branch and Master Branch?? 
+    Git is a web app based version control system. Before having a centralized versioning control like Git, there were teams tasked to keep changes updated. It was difficult, messy, and often not fast enough. Git solved all these issues and more.
+2) What is difference Between Main Branch and Master Branch??
+    A branch essentially is a unique set of code changes with a unique name. Each respository can have one or more
+    branch. The main branch the one where all the changes eventually get merged back into,. and is called master.
 3) Can you explain the difference between Git and GitHub?
+    Git is the cli tool and GitHub is the website in simple terms.
 4) How do you create a new repository on GitHub?
+    gh repo create or go through the 
 5) What is difference between local & remote repository? How to connect local to remote? 
-
+    git push origin <local branch> && git merge branch_name
 ## Tasks
 task-1: 
 - Set your user name and email address, which will be associated with your commits.

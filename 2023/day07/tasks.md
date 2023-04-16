@@ -1,4 +1,4 @@
-# Day 7 Task: Understanding package manager and systemctl
+day07```# Day 7 Task: Understanding package manager and systemctl
 
 ### What is a package manager in Linux?
  
@@ -21,7 +21,7 @@
  1) You have to install docker and jenkins in your system from your terminal using package managers
 
  2) Write a small blog or article to install these tools using package managers on Ubuntu and CentOS
-
+    To install docker or jenkins you must first spin up a virtual machine of your choice. I personally suggest using an aws free tier account or the traditional way of a local virtual application such as VirtualBox. Once installed, choose a linux flavor of your choice (Ubuntu 18.04+) and run the commands "sudo apt install docker -y && sudo apt install jenkins -y --classic. It's as simple as that.
 
 ### systemctl and systemd
 
@@ -31,15 +31,18 @@
 ## Tasks
 
  1) check the status of docker service in your system (make sure you completed above tasks, else docker won't be installed)
-
+    After install docker with snap, you must run "sudo snap start docker". Docker has been installed propery and is currently active and loaded.
  2) stop the service jenkins and post before and after screenshots
-
+    sudo snap install docker
+    sudo systemctl list-units --type=service | grep snap*
+    sudo systemctl start snap.docker.dockerd.service
+    sudo systemctl stop snap.docker.dockerd.service
  3) read about the commands systemctl vs service
-
+    The systemctl command interacts with the SystemD service manager to manage the services. Contrary to service command, it manages the services by interacting with the SystemD process instead of running the init script -- source https://www.baeldung.com/linux/differences-systemctl-service#:~:text=The%20systemctl%20command%20interacts%20with,of%20running%20the%20init%20script. 
  eg. `systemctl status docker` vs `service docker status`
 
 For Reference, read [this](https://www.howtogeek.com/devops/how-to-check-if-the-docker-daemon-or-a-container-is-running/#:~:text=Checking%20With%20Systemctl&text=Check%20what%27s%20displayed%20under%20%E2%80%9CActive,running%20sudo%20systemctl%20start%20docker%20.)
 
 
-#### Post about this and bring your friends to this #90DaysOfDevOps challenge.
+#### Post about this and bring your friends to this #90DaysOfDevOps challenge.```
 
