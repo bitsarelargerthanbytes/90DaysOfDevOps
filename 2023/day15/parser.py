@@ -18,6 +18,13 @@ for provider, info in services.items():
     if provider != "debug":
         print(f"{provider}: {info['name']}")
 
+#In the code above, we open the services.json file using the open() function and load its contents into the data variable using json.load(). We then extract the "services" dictionary from data. Finally, we iterate over the items in services and print the provider and its corresponding service name, excluding the "debug" key.
+
+#When you run the code, it will read the services.json file, extract the service names for each cloud service provider, and print them in the desired format:
+
+
+
+
 #print("JSON:\n",json_data)
 
 with open(yaml_file, "r") as stream:
