@@ -10,11 +10,20 @@
 
 - Use the `docker run` command to start a new container and interact with it through the command line. [Hint: docker run hello-world]
 
+sudo docker run hello-world
+
 - Use the `docker inspect` command to view detailed information about a container or image.
+
+sudo docker inspect hello-world:latest
 
 - Use the `docker port` command to list the port mappings for a container.
 
+docker port my-container
+
+
 - Use the `docker stats` command to view resource usage statistics for one or more containers.
+
+
 
 - Use the `docker top` command to view the processes running inside a container.
 
