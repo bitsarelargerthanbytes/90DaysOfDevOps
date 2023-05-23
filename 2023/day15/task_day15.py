@@ -7,18 +7,8 @@ yaml_file = "services.yaml"
 with open(json_file, 'r', encoding='utf-8') as f:
     json_data = json.loads(f.read())
 
-with open("services.json", "r") as file:
-    data = json.load(file)
+print("JSON:\n",json_data)
 
-# Get the services dictionary
-services = data["services"]
-
-# Print the service names for each cloud service provider
-for provider, info in services.items():
-    if provider != "debug":
-        print(f"{provider}: {info['name']}")
-
-#print("JSON:\n",json_data)
 
 with open(yaml_file, "r") as stream:
     try:
@@ -28,3 +18,4 @@ with open(yaml_file, "r") as stream:
 
 
 #print("YAML:\n",yaml_data)
+
