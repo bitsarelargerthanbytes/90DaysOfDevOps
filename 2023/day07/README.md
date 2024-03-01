@@ -19,10 +19,8 @@ For example, RPM has Yum and DNF package managers. For DEB, you have apt-get, ap
 ## Tasks
 
 1.  You have to install docker and jenkins in your system from your terminal using package managers
-    I've alread installed docker when I first got my laptop. This does the trick for osx installation using the cmd line + package manager 'brew install jenkinsbrew install jenkins'
 
 2.  Write a small blog or article to install these tools using package managers on Ubuntu and CentOS
-    Only have a mac.
 
 ### systemctl and systemd
 
@@ -31,21 +29,10 @@ systemctl is used to examine and control the state of “systemd” system and s
 ## Tasks
 
 1.  check the status of docker service in your system (make sure you completed above tasks, else docker won't be installed)
-    'brew services
-Name           Status  User    File
-docker-machine none
-jenkins        started macbook ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist'
 
 2.  stop the service jenkins and post before and after screenshots
-    'macbook@pervysage ~ % brew services stop jenkins
-Stopping `jenkins`... (might take a while)
-==> Successfully stopped `jenkins` (label: homebrew.mxcl.jenkins)
-macbook@pervysage ~ % brew services
-Name           Status User File
-docker-machine none
-jenkins        nonev'
+
 3.  read about the commands systemctl vs service
-    Completed.
 
 eg. `systemctl status docker` vs `service docker status`
 
