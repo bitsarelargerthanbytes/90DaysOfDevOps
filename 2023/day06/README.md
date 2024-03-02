@@ -21,6 +21,7 @@ Each of the three permissions are assigned to three defined categories of users.
   As a task, change the user permissions of the file and note the changes after `ls -ltr`
 
 2. Write an article about File Permissions based on your understanding from the notes.
+  File permissions are utilized to categorize who, team, org, and other specified "users" can access the file. Permissions are attached to files, allowing some to only be read, executed, writiable or combinations of all three. This is all to achieve "Least privelige" philosophy and system hardening / security.
 
 3. Read about ACL and try out the commands `getfacl` and `setfacl`
 
