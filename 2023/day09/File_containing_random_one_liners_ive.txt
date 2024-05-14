@@ -1,0 +1,97 @@
+# File containing random one liners ive learned over the years
+
+
+while read HOST; do ssh -o StrictHostKeyChecking=no $HOST "echo "Checking host $HOST"" < /dev/null; done < hosts_test-ssh.txt
+
+
+
+cat acroname_hosts_error_rates | awk '{ print $NF }' | tr -d '}' | awk '{ sum += $1} END { if (NR > 0) print sum / NR }'
+
+
+ifconfig -a | grep inet | grep 10
+
+
+ipcalc 10.45.112.109 0xffff800
+
+
+dig short+ apple.com
+
+
+sudo tcp dump -vnes0 -i en0 host 10.45.119.255
+
+
+curl -f url
+
+
+connection-to-db -Nse "SELECT s.fqdn, s.serial_number, s.rack, s.shelf, sls.state_name FROM server_lifecycle_states sls, servers s WHERE sls.id = s.lifecycle_state_id and sls.state_id and sls.state_name IN ( 'provision','provisioning' ) and ( s.fqdn like 'wk%' or s.fqdn like 'm%' ) and s.cluster = 'devicelab'"
+
+
+ansible targets -i ./inventory.txt -m shell -a 'ls -al' 
+
+
+ansible all -i /usr/local/bin/wk-inventory -m shell -a 'diskutil info /dev/disk0 | grep "Media Name"' -l '!ls*' > /tmp/z
+
+
+
+consul members | egrep '^pz1[0-9]{3}' | wc -l
+
+
+consul members | egrep 'pz109\d'
+
+
+sudo /usr/local/IPMI/IPMICFG-Linux.x86_64 -m
+
+
+for h in $(consul catalog nodes --service=netboot | awk'/netboot/ { print $1 }'); do mkdir $h; curl http://$h/path-to-img -o $h/file.xip; done
+
+
+find . -type -f exec md5sum {}
+
+
+
+update servers set serial_number="sdfghjk" where host="jk007" limit 1;
+
+
+
+rysnc -av --exclude=.git/ --exclude=./consul --exclude=./env /path/to/local/file remote@host:/path/to/remote/destination
+
+
+du -xms *
+
+
+tail -f log.out
+
+
+scutil --dns | grep 'nameserver\[[0-9]*\]'
+
+
+sudo launchctl unload /Library/LaunchDaemons/name-of-plist
+
+
+sudo kill -9 PID
+
+
+journalctl -xefu servicename
+
+
+
+sudo networksetup -setdnsservers Ethernet 8.8.8.8
+
+
+
+
+sudo impitool chassis bootparm set bootflag force_pxe && sudo reboot
+
+
+sudo udevadm control --reload-rules
+
+
+
+h=$(command report triage | grep -v non_conforming_hosts | awk '{print $2}'); for h in $h; do ssh -o StrictHostKeyChecking=no "hostname" 2>1; done | tee /tmp/hdown && d=$(cat /tmp/hdown | grep - Could | grep -i hostname_match awk '{print $6'}); echo "${d//:}" > /tmp/ddd; d=$(cat /tmp/ddd); for d in $d; do ssh $d "hostanme"; echo "checking location of $d"; command server info -ef $d; done
+
+
+
+dsacheutil -q user | grep -A 3 -B 2 -e uid:\ 5'[0-9[0-9]'
+
+
+
